@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello Gorgeous</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="bootstrap1.min.css">
+
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .checkout-page {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .checkout-summary,
+        .user-details,
+        .payment-methods {
+            margin-top: 20px;
+        }
+
+        .checkout-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .checkout-item-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .checkout-item-info {
+            flex-grow: 1;
+        }
+
+        .checkout-item-info h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .checkout-item-info p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .payment-methods input {
+            margin-right: 10px;
+        }
+
+        .payment-methods div {
+            margin-bottom: 10px;
+        }
+
+        .payment-inputs {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .checkout-summary button {
+            width: 100%;
+            padding: 15px;
+            background-color: #e33939;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .checkout-summary button:hover {
+            background-color: #ba5353;
+        }
+
+        /* Modal (Popup) Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .modal-header {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .modal-footer {
+            text-align: center;
+        }
+
+        .modal-footer button {
+            padding: 10px 20px;
+            background-color: #ff2020;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-footer button:hover {
+            background-color: #bd2929;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                    <a href="index.html" class="navbar-brand">
+                        <h4 class="text-primary display-6 fw-bold mb-0">Hello Gorgeous</h4>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="shop.html" class="nav-item nav-link ">Shop</a>
+
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                            <a href="cart.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+
+                            <!-- Wishlist Icon with Link -->
+                            <a href="wishlist.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-heart"></i> Wishlist
+                            </a>
+                            <a href="dashboard.html"
+                                class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">DashBoard</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+<br>
+    <div class="checkout-page">
+        <h2>Checkout</h2>
+
+        <!-- Cart items section -->
+        <div id="checkout-items"></div>
+
+        <!-- User details form -->
+        <div class="user-details">
+            <h3>Billing Information</h3>
+            <br>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+                <div id="name-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div id="email-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter your phone number">
+                <div id="phone-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter your address">
+                <div id="address-error" class="error-message"></div>
+            </div>
+        </div>
+
+        <!-- Payment methods -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <br>
+            <div>
+                <input type="radio" id="credit-card" name="payment" value="credit-card">
+                <label for="credit-card">Credit/Debit Card</label>
+            </div>
+            <div>
+                <input type="radio" id="upi" name="payment" value="upi">
+                <label for="upi">UPI</label>
+            </div>
+            <div>
+                <input type="radio" id="cod" name="payment" value="cod">
+                <label for="cod">Cash on Delivery (COD)</label>
+            </div>
+        </div>
+
+        <!-- Payment input fields -->
+        <div class="payment-inputs" id="credit-card-fields">
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="Enter your card number">
+                <div id="card-number-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY">
+                <div id="expiry-date-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="Enter CVV">
+                <div id="cvv-error" class="error-message"></div>
+            </div>
+        </div>
+
+        <div class="payment-inputs" id="upi-fields">
+            <div class="form-group">
+                <label for="upi-id">UPI ID</label>
+                <input type="text" id="upi-id" placeholder="Enter your UPI ID">
+                <div id="upi-id-error" class="error-message"></div>
+            </div>
+        </div>
+
+        <div class="payment-inputs" id="cod-fields">
+            <p>No payment details required for Cash on Delivery.</p>
+        </div>
+
+        <!-- Summary and place order button -->
+        <div class="checkout-summary">
+            <h3>Total: ₹<span id="total-price">0.00</span></h3>
+            <br>
+            <button id="place-order-btn">Place Order</button>
+        </div>
+    </div>
+
+    <!-- Modal (Popup) -->
+    <div id="order-success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Order Placed Successfully!</div>
+            <div class="modal-footer">
+                <button onclick="window.location.href='index.html'">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+<br>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-4 text-start">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Links</h4>
+                        <a href="about.html" class="btn-link"> About</a>
+                        <a href="shop.html" class="btn-link"> Shop</a>
+                        <a href="blog.html" class="btn-link"> Blog</a>
+                        <a href="faq.html" class="btn-link"> FAQ</a>
+                        <a href="contact.html" class="btn-link"> Contact</a>
+                        <a href="wishlist.html" class="btn-link"> Wishlist</a>
+                        <a href="dashboard.html" class="btn-link"> Dashboard</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-item">
+                        <h4 class="mb-4 text-white">Hello Gorgeous</h4>
+                        <p class="text-white">Discover elegance and style with our exclusive boutique collection. Each
+                            piece is crafted to perfection, merging classic design with modern trends. Our boutique
+                            celebrates the art of fashion, bringing unique, high-quality pieces to elevate your
+                            wardrobe. </p>
+
+                        <div class="btn-link d-flex justify-content-center">
+                            <a href="https://www.facebook.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.x.com" class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-0"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Follow Us</h4>
+                        <a href="https://www.facebook.com" class="btn-link"> Facebook</a>
+                        <a href="https://www.instagram.com" class="btn-link"> Instagram</a>
+                        <a href="https://www.x.com" class="btn-link"> Twitter</a>
+                        <h4 class="my-4 text-white">Contact Us</h4>
+                        <a class="btn-link"><i class="fas fa-envelope text-secondary me-2"></i>
+                            hellogorgeous@gmail.com</a>
+                        <a class="btn-link"><i class="fas fa-phone-alt  text-secondary me-2"></i>+91 1986654321</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-light"><a><i class="fas fa-copyright text-light me-2"></i>Hello Gorgeous</a>, All
+                        right reserved.</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        // Render cart items
+        function renderCheckoutItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const checkoutContainer = document.getElementById('checkout-items');
+            checkoutContainer.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                checkoutContainer.innerHTML = '<p>Your cart is empty!</p>';
+                return;
+            }
+
+            let totalPrice = 0;
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('checkout-item');
+                itemElement.innerHTML = `
+                  <img src="${item.image}" alt="${item.name}" class="checkout-item-image">
+                  <div class="checkout-item-info">
+                      <h3>${item.name}</h3>
+                      <p><strong>Size: </strong>${item.size}</p>
+                      <p><strong>Price: </strong>₹${item.price}</p>
+                  </div>
+              `;
+                checkoutContainer.appendChild(itemElement);
+                totalPrice += parseInt(item.price);
+            });
+
+            document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+        }
+
+        // Name validation: allows only letters
+        function validateName() {
+            const nameError = document.getElementById('name-error');
+            const nameValue = document.getElementById('name').value;
+            const nameRegex = /^[a-zA-Z\s]+$/;
+
+            if (!nameRegex.test(nameValue)) {
+                nameError.textContent = 'Name must contain only letters.';
+                return false;
+            } else {
+                nameError.textContent = '';
+                return true;
+            }
+        }
+
+        // Email validation: checks for valid email format
+        function validateEmail() {
+            const emailError = document.getElementById('email-error');
+            const emailValue = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(emailValue)) {
+                emailError.textContent = 'Enter a valid email address.';
+                return false;
+            } else {
+                emailError.textContent = '';
+                return true;
+            }
+        }
+
+        // Phone Number validation: allows only digits and checks for 10 digits
+        function validatePhone() {
+            const phoneError = document.getElementById('phone-error');
+            const phoneValue = document.getElementById('phone').value;
+            const phoneRegex = /^\d{10}$/;
+
+            if (!phoneRegex.test(phoneValue)) {
+                phoneError.textContent = 'Phone number must be 10 digits.';
+                return false;
+            } else {
+                phoneError.textContent = '';
+                return true;
+            }
+        }
+
+        // Validation for Expiry Date
+        function validateExpiryDate() {
+            const expiryDateError = document.getElementById('expiry-date-error');
+            const expiryDateValue = document.getElementById('expiry-date').value;
+            const expiryDateRegex = /^(0[1-9]|1[0-2])\/(\d{2})$/;
+
+            if (!expiryDateRegex.test(expiryDateValue)) {
+                expiryDateError.textContent = 'Enter a valid expiry date (MM/YY).';
+                return false;
+            } else {
+                expiryDateError.textContent = '';
+                return true;
+            }
+        }
+
+        // Validation for CVV
+        function validateCvv() {
+            const cvvError = document.getElementById('cvv-error');
+            const cvvValue = document.getElementById('cvv').value;
+            const cvvRegex = /^\d{3}$/;
+
+            if (!cvvRegex.test(cvvValue)) {
+                cvvError.textContent = 'CVV must be 3 digits.';
+                return false;
+            } else {
+                cvvError.textContent = '';
+                return true;
+            }
+        }
+
+        // Validation for Card Number
+        function validateCardNumber() {
+            const cardNumberError = document.getElementById('card-number-error');
+            const cardNumberValue = document.getElementById('card-number').value;
+            const validCardNumber = cardNumberValue.replace(/[^0-9]/g, '').slice(0, 16);
+            document.getElementById('card-number').value = validCardNumber;
+
+            if (validCardNumber.length < 16 && validCardNumber.length > 0) {
+                cardNumberError.textContent = 'Card number must be 16 digits.';
+                return false;
+            } else {
+                cardNumberError.textContent = '';
+                return true;
+            }
+        }
+
+        // Validation for UPI ID
+        function validateUpiId() {
+            const upiIdError = document.getElementById('upi-id-error');
+            const upiIdValue = document.getElementById('upi-id').value;
+            const upiIdRegex = /^\d{10}@[a-zA-Z]{3}$/;
+
+            if (!upiIdRegex.test(upiIdValue)) {
+                upiIdError.textContent = 'Enter a valid UPI ID (e.g., username@provider)';
+                return false;
+            } else {
+                upiIdError.textContent = '';
+                return true;
+            }
+        }
+
+        // Show payment fields based on selection
+        document.querySelectorAll('input[name="payment"]').forEach(payment => {
+            payment.addEventListener('change', function () {
+                document.getElementById('credit-card-fields').style.display = 'none';
+                document.getElementById('upi-fields').style.display = 'none';
+                document.getElementById('cod-fields').style.display = 'none';
+
+                if (payment.value === 'credit-card') {
+                    document.getElementById('credit-card-fields').style.display = 'block';
+                } else if (payment.value === 'upi') {
+                    document.getElementById('upi-fields').style.display = 'block';
+                } else if (payment.value === 'cod') {
+                    document.getElementById('cod-fields').style.display = 'block';
+                }
+            });
+        });
+
+        // Handle form submission and validation
+        document.getElementById('place-order-btn').addEventListener('click', function () {
+            const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+            let isValid = validateName() && validateEmail() && validatePhone();
+
+            // Check if a payment method is selected
+            if (!paymentMethod) {
+                alert('Please select a payment method.');
+                return;
+            }
+
+            // Perform additional validation for the selected payment method
+            if (paymentMethod === 'credit-card') {
+                isValid = isValid && validateCardNumber() && validateExpiryDate() && validateCvv();
+            } else if (paymentMethod === 'upi') {
+                isValid = isValid && validateUpiId();
+            }
+
+            if (isValid) {
+                document.getElementById('order-success-modal').style.display = 'block';
+                localStorage.removeItem('cartItems');
+            } else {
+                alert('Please fix the errors in the form.');
+            }
+        });
+
+        // Load checkout items on page load
+        window.onload = renderCheckoutItems;
+
+        // Real-time validation listeners for form fields
+        document.getElementById('name').addEventListener('input', validateName);
+        document.getElementById('email').addEventListener('input', validateEmail);
+        document.getElementById('phone').addEventListener('input', validatePhone);
+        document.getElementById('card-number').addEventListener('input', validateCardNumber);
+        document.getElementById('expiry-date').addEventListener('input', validateExpiryDate);
+        document.getElementById('cvv').addEventListener('input', validateCvv);
+        document.getElementById('upi-id').addEventListener('input', validateUpiId);
+    </script>
+
+</body>
+
+</html>

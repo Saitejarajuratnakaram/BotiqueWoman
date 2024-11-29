@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello Gorgeous</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Google Fonts for Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* font-family: 'Poppins', sans-serif; */
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Container */
+        .faq-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 50px;
+            /* background: linear-gradient(135deg, #f0d0e4, #e8c5d7); */
+            background-color: #fd5d5d;
+            border-radius: 12px;
+            box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: whitesmoke;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Accordion Style */
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+            transform: scale(1.03);
+        }
+
+        .accordion-header {
+            /* background-color: #f6e0f1; */
+            padding: 18px 25px;
+            text-align: left;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fd5d5d;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .accordion-header:hover {
+            background-color: #f1d3e2;
+        }
+
+        .accordion-header i {
+            font-size: 1.6rem;
+            transition: all 0.3s ease;
+            /* color: #5a2a8c; */
+            margin-left: 18px;
+        }
+
+        .accordion-header.open i {
+            transform: rotate(90deg);
+        }
+
+        .accordion-content {
+            padding: 20px;
+            font-size: 1rem;
+            color: #666;
+            background-color: #f9f9f9;
+            border-top: 2px solid #e0e0e0;
+            display: none;
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .accordion-content.open {
+            display: block;
+            max-height: 500px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .accordion-header {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome">
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                    <a href="index.html" class="navbar-brand">
+                        <h4 class="text-primary display-6 fw-bold mb-0">Hello Gorgeous</h4>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop</a>
+
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="faq.html" class="nav-item nav-link active">FAQ</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                            <a href="cart.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+
+                            <!-- Wishlist Icon with Link -->
+                            <a href="wishlist.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-heart"></i> Wishlist
+                            </a>
+                            <a href="dashboard.html"
+                                class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">DashBoard</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- FAQ Container -->
+    <section class="faq-container">
+        <h1>Frequently Asked Questions(FAQ'S)</h1>
+
+        <div class="accordion">
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span><i class="fa fa-hanger"></i> What sizes do you offer?</span>
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>We offer sizes ranging from XS to XL. Each product page includes a size chart to help you select
+                        the perfect fit. Our team is always happy to assist if you need further guidance.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span><i class="fa fa-hanger"></i> How can I track my order?</span>
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>After placing your order, you'll receive a confirmation email with a tracking number. You can
+                        track your order status through our website or the courier's site directly.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span><i class="fa fa-hanger"></i> Do you accept returns or exchanges?</span>
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>Yes! We accept returns within 30 days of purchase. Please ensure the items are unworn, unwashed,
+                        and in original condition. We offer exchanges and store credits too!</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span><i class="fa fa-hanger"></i> How can I use a discount code?</span>
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>At checkout, you can enter your discount code in the designated box. Make sure to double-check
+                        the terms and conditions of the promotion to ensure it applies to your items.</p>
+                </div>
+            </div>
+
+            <!-- Accordion Item 5 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span><i class="fa fa-hanger"></i> Can I modify my order after placing it?</span>
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>Once your order is confirmed, changes are not possible. However, you can cancel your order within
+                        the first 30 minutes and place a new one with the correct items.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-4 text-start">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Links</h4>
+                        <a href="about.html" class="btn-link"> About</a>
+                        <a href="shop.html" class="btn-link"> Shop</a>
+                        <a href="blog.html" class="btn-link"> Blog</a>
+                        <a href="faq.html" class="btn-link"> FAQ</a>
+                        <a href="contact.html" class="btn-link"> Contact</a>
+                        <a href="wishlist.html" class="btn-link"> Wishlist</a>
+                        <a href="dashboard.html" class="btn-link"> Dashboard</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-item">
+                        <h4 class="mb-4 text-white">Hello Gorgeous</h4>
+                        <p class="text-white">Discover elegance and style with our exclusive boutique collection. Each
+                            piece is crafted to perfection, merging classic design with modern trends. Our boutique
+                            celebrates the art of fashion, bringing unique, high-quality pieces to elevate your
+                            wardrobe. </p>
+
+                        <div class="btn-link d-flex justify-content-center">
+                            <a href="https://www.facebook.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.x.com" class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-0"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Follow Us</h4>
+                        <a href="https://www.facebook.com" class="btn-link">  Facebook         </a>
+                        <a href="https://www.instagram.com" class="btn-link"> Instagram</a>
+                        <a href="https://www.x.com" class="btn-link"> Twitter</a>
+                        <h4 class="my-4 text-white">Contact Us</h4>
+                        <a class="btn-link"><i class="fas fa-envelope text-secondary me-2"></i>
+                            hellogorgeous@gmail.com</a>
+                        <a class="btn-link"><i class="fas fa-phone-alt  text-secondary me-2"></i>+91 1986654321</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-light"><a><i class="fas fa-copyright text-light me-2"></i>Hello Gorgeous</a>, All
+                        right reserved.</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Accordion Toggle Script
+        document.querySelectorAll('.accordion-header').forEach(function (header) {
+            header.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+
+                // Toggle the content visibility and icon rotation
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
+                    this.classList.remove('open');
+                } else {
+                    // Close all other sections first
+                    document.querySelectorAll('.accordion-content').forEach(function (accContent) {
+                        accContent.classList.remove('open');
+                    });
+                    document.querySelectorAll('.accordion-header').forEach(function (accHeader) {
+                        accHeader.classList.remove('open');
+                    });
+
+                    // Open the clicked section
+                    content.classList.add('open');
+                    this.classList.add('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
