@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello Gorgeous</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="bootstrap1.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="sub.css">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .wishlist-page-container {
+            background-color: #fff;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-left: 270px;
+            transition: all 0.3s ease;
+        }
+
+        .wishlist-page-title {
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .wishlist-table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .wishlist-table-custom th,
+        .wishlist-table-custom td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .wishlist-table-custom th {
+            font-weight: 600;
+            color: #666;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .wishlist-table-custom tbody tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .wishlist-table-custom tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .wishlist-item-image-custom {
+            width: 60px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .action-buttons-container button {
+            padding: 8px 15px;
+            font-size: 14px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(206, 97, 8, 0.4);
+        }
+
+        .action-buttons-container button:hover {
+            box-shadow: 0 4px 8px rgba(211, 86, 8, 0.4);
+            color: #ddd;
+        }
+
+        .wishlist-table-custom button {
+            background-color: transparent;
+            color: #e74c3c;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .wishlist-table-custom button:hover {
+            color: #c0392b;
+        }
+
+        #checkout-wishlist-btn-container {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(151, 37, 29, 0.4);
+        }
+
+        #checkout-wishlist-btn-container:hover {
+            background-color: #902a2a;
+            box-shadow: 0 6px 12px rgba(184, 61, 12, 0.4);
+        }
+
+        /* Empty state styling */
+        .wishlist-empty-message-custom {
+            text-align: center;
+            font-size: 16px;
+            color: #c23737;
+            margin-top: 20px;
+        }
+
+        /* Base responsive styles */
+        @media (max-width: 1024px) {
+            .wishlist-page-container {
+                max-width: 750px;
+                margin-left: 0;
+                /* Adjust to full width */
+            }
+
+            .wishlist-page-title {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            .wishlist-table-custom th,
+            .wishlist-table-custom td {
+                padding: 12px;
+            }
+
+            .wishlist-item-image-custom {
+                width: 55px;
+                margin-right: 12px;
+            }
+
+            .action-buttons-container button {
+                font-size: 13px;
+                padding: 7px 14px;
+            }
+
+            #checkout-wishlist-btn-container {
+                padding: 11px 22px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wishlist-page-container {
+                padding: 15px;
+                max-width: 600px;
+            }
+
+            .wishlist-page-title {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+
+            .wishlist-table-custom th,
+            .wishlist-table-custom td {
+                padding: 10px;
+            }
+
+            .wishlist-item-image-custom {
+                width: 50px;
+                margin-right: 10px;
+            }
+
+            .action-buttons-container button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            #checkout-wishlist-btn-container {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wishlist-page-container {
+                padding: 10px;
+                max-width: 100%;
+            }
+
+            .wishlist-page-title {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .wishlist-table-custom th,
+            .wishlist-table-custom td {
+                padding: 8px;
+            }
+
+            .wishlist-item-image-custom {
+                width: 45px;
+                margin-right: 8px;
+            }
+
+            .action-buttons-container button {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
+            #checkout-wishlist-btn-container {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+
+        /* Responsive adjustments for very small screens (like mobile) */
+        @media (max-width: 360px) {
+            .wishlist-page-container {
+                padding: 8px;
+            }
+
+            .wishlist-page-title {
+                font-size: 16px;
+            }
+
+            .wishlist-table-custom th,
+            .wishlist-table-custom td {
+                padding: 6px;
+            }
+
+            .wishlist-item-image-custom {
+                width: 40px;
+                margin-right: 6px;
+            }
+
+            .action-buttons-container button {
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+
+            #checkout-wishlist-btn-container {
+                padding: 7px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome">
+
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="container-fluid">
+                <div class="container px-0">
+                    <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                        <a href="index.html" class="navbar-brand">
+                            <h4 class="text-primary display-6 fw-bold mb-0">Hello Gorgeous</h4>
+                        </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-primary"></span>
+                        </button>
+                        <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto border-top">
+                                <a href="index.html" class="nav-item nav-link">Home</a>
+                                <a href="shop.html" class="nav-item nav-link">Shop</a>
+
+                                <a href="about.html" class="nav-item nav-link">About</a>
+                                <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                                <a href="cart.html" class="btn btn-outline-primary ms-3">
+                                    <i class="fas fa-shopping-cart"></i> Cart
+                                </a>
+
+                                <!-- Wishlist Icon with Link -->
+                                <a href="wishlist.html" class="btn btn-outline-primary ms-3">
+                                    <i class="fas fa-heart"></i> Wishlist
+                                </a>
+                                <a href="dashboard.html"
+                                    class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">DashBoard</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <div class="wishlist-page-container">
+            <h2 class="wishlist-page-title" style="color: black;">Your Wishlist</h2>
+
+            <table class="wishlist-table-custom">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Product Name</th>
+                        <th>Size</th>
+                        <th>Unit Price</th>
+                        <th>Stock Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="wishlist-items-container">
+                    <!-- Wishlist items will be injected here by JavaScript -->
+                </tbody>
+            </table>
+
+            <div class="wishlist-empty-message-custom" id="wishlist-empty-message" style="display: none;">
+                Your wishlist is empty!
+            </div>
+
+        </div>
+
+        <script>
+            // Function to remove an item from the wishlist
+            function removeItemFromWishlist(index) {
+                let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+                wishlistItems.splice(index, 1); // Remove the item at the given index
+                localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+                renderWishlistItems(); // Re-render the wishlist
+            }
+
+            // Function to move an item from Wishlist to Cart
+            function moveItemToCart(index) {
+                let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                const itemToMove = wishlistItems.splice(index, 1)[0]; // Remove from wishlist and get item
+                cartItems.push(itemToMove); // Add to cart
+
+                localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                renderWishlistItems(); // Re-render wishlist
+            }
+
+            // Function to render Wishlist Items
+            function renderWishlistItems() {
+                const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+                const wishlistContainer = document.getElementById('wishlist-items-container');
+                const emptyMessage = document.getElementById('wishlist-empty-message');
+                wishlistContainer.innerHTML = '';
+
+                if (wishlistItems.length === 0) {
+                    emptyMessage.style.display = 'block';
+                    return;
+                } else {
+                    emptyMessage.style.display = 'none';
+                }
+
+                wishlistItems.forEach((item, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+              <td><button onclick="removeItemFromWishlist(${index})">✕</button></td>
+              <td><img src="${item.image}" alt="${item.name}" class="wishlist-item-image-custom"> ${item.name}</td>
+              <td>${item.size}</td>
+              <td>₹${item.price}</td>
+              <td>In Stock</td>
+              <td class="action-buttons-container">
+                <button onclick="moveItemToCart(${index})">Add to Cart</button>
+              </td>
+            `;
+                    wishlistContainer.appendChild(row);
+                });
+            }
+
+            // Render wishlist on page load
+            window.onload = renderWishlistItems;
+
+            // Checkout button functionality (Redirect for now)
+            document.getElementById('checkout-wishlist-btn-container').addEventListener('click', function () {
+                window.location.href = 'checkout.html';
+            });
+        </script>
+
+        <br>
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5 justify-content-center">
+                    <div class="col-lg-4 text-start">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Links</h4>
+                            <a href="about.html" class="btn-link"> About</a>
+                            <a href="shop.html" class="btn-link"> Shop</a>
+                            <a href="blog.html" class="btn-link"> Blog</a>
+                            <a href="faq.html" class="btn-link"> FAQ</a>
+                            <a href="contact.html" class="btn-link"> Contact</a>
+                            <a href="wishlist.html" class="btn-link"> Wishlist</a>
+                            <a href="dashboard.html" class="btn-link"> Dashboard</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="footer-item">
+                            <h4 class="mb-4 text-white">Hello Gorgeous</h4>
+                            <p class="text-white">Discover elegance and style with our exclusive boutique collection.
+                                Each
+                                piece is crafted to perfection, merging classic design with modern trends. Our boutique
+                                celebrates the art of fashion, bringing unique, high-quality pieces to elevate your
+                                wardrobe. </p>
+
+                            <div class="btn-link d-flex justify-content-center">
+                                <a href="https://www.facebook.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.x.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-0"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Follow Us</h4>
+                            <a href="https://www.facebook.com" class="btn-link"> Faceboock</a>
+                            <a href="https://www.instagram.com" class="btn-link"> Instagram</a>
+                            <a href="https://www.x.com" class="btn-link"> Twitter</a>
+                            <h4 class="my-4 text-white">Contact Us</h4>
+                            <a class="btn-link"><i class="fas fa-envelope text-secondary me-2"></i>
+                                hellogorgeous@gmail.com</a>
+                            <a class="btn-link"><i class="fas fa-phone-alt  text-secondary me-2"></i>+91 1986654321</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-light"><a><i class="fas fa-copyright text-light me-2"></i>Hello Gorgeous</a>,
+                            All
+                            right reserved.</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+                class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+
+    </body>
+
+</html>
