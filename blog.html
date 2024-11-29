@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello Gorgeous</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Roboto:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            /* font-family: 'Roboto', sans-serif; */
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5e6e0;
+            padding: 60px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .header .intro {
+            max-width: 50%;
+        }
+
+        .header .intro h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            margin: 0;
+            color: #3a3a3a;
+        }
+
+        .header .intro p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .header .profile-pic {
+            max-width: 40%;
+        }
+
+        .header .profile-pic img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .search-categories {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        /* Search Bar Styling */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 60%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-button {
+            background-color: #d9b7a3;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            margin-left: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #c38c6b;
+        }
+
+        /* Suggestions Dropdown */
+        .suggestions-dropdown {
+            position: absolute;
+            top: 116%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 10;
+            display: none;
+        }
+
+        .suggestions-dropdown p {
+            padding: 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .suggestions-dropdown p:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Container for both blog and resource articles */
+        #reviewsContainer,
+        #resourceContainer {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow items to wrap into new lines */
+            gap: 45px;
+            /* Space between the cards */
+            justify-content: center;
+            /* Center the cards horizontally */
+        }
+
+        /* Styling for individual article cards */
+        .review,
+        .resource-item {
+            width: 355px;
+            /* Fixed width for all cards */
+            height: 400px;
+            /* Fixed height for all cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Space content evenly */
+            transition: transform 0.3s ease;
+            /* Smooth hover transition */
+        }
+
+        /* Styling for the images inside each card */
+        .review img,
+        .resource-item img {
+            width: 100%;
+            height: 200px;
+            /* Fixed height for images */
+            object-fit: cover;
+            /* Cover the space without stretching */
+        }
+
+        /* Content section (title and description) inside each card */
+        .review .content,
+        .resource-item .content {
+            padding: 15px;
+            flex-grow: 1;
+            /* Ensure the content area takes up remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Title styling */
+        .review h3,
+        .resource-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Description styling */
+        .review p,
+        .resource-item p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* Hover effect for the cards */
+        .review:hover,
+        .resource-item:hover {
+            transform: translateY(-10px);
+            /* Lift the card slightly on hover */
+        }
+
+        /* Optional: Specific styles for blog and resource categories */
+        .review {
+            border-left: 5px solid #3498db;
+            /* Blue color for blog cards */
+        }
+
+        .resource-item {
+            border-left: 5px solid #2ecc71;
+            /* Green color for resource cards */
+        }
+
+
+
+        /* Subscribe Form Styling */
+        .subscribe-section {
+            background-color: #fd5d5d;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+            text-align: center;
+            width: 630px;
+            margin-left: 230px;
+        }
+
+        .subscribe-section h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .subscribe-section input[type="email"] {
+            padding: 12px;
+            font-size: 18px;
+            width: 65%;
+            border-radius: 30px;
+            border: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .subscribe-section button {
+            padding: 12px 30px;
+            font-size: 18px;
+            background-color: #fff;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscribe-section button:hover {
+            background-color: #c38c6b;
+        }
+        .validation-message {
+                margin-top: 10px;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            .validation-message.error {
+                background-color: white;
+                color: red;
+            }
+
+            .validation-message.success {
+                background-color: white;
+                color: green;
+            }
+
+        /* Featured Products Section */
+        .featured-products {
+            margin-top: 60px;
+            padding: 40px 0;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .featured-products h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
+    gap: 20px;  /* Adjust the spacing between cards */
+    margin: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;  /* Light border around each card */
+    border-radius: 8px;  /* Rounded corners */
+    overflow: hidden;  /* To ensure no content overflows */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for a card effect */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);  /* Slight upward hover effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;  /* Fixed height for uniformity */
+    object-fit: cover;  /* Ensures image covers the area without distortion */
+}
+
+.product-card .content {
+    padding: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header .intro {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .header .profile-pic {
+                max-width: 100%;
+            }
+
+            .search-input {
+                width: 80%;
+            }
+
+            .review,
+            .resource-item {
+                width: 100%;
+            }
+
+            .featured-products .product-card {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome">
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                    <a href="index.html" class="navbar-brand">
+                        <h4 class="text-primary display-6 fw-bold mb-0">Hello Gorgeous</h4>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop</a>
+
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                            <a href="blog.html" class="nav-item nav-link active">Blog</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                            <a href="cart.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+
+                            <!-- Wishlist Icon with Link -->
+                            <a href="wishlist.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-heart"></i> Wishlist
+                            </a>
+                            <a href="dashboard.html"
+                                class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">DashBoard</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container">
+        <header class="header">
+            <div class="intro">
+                <h1>Welcome to <br> Your Boutique Style Hub!</h1>
+                <br>
+                <p>Explore the Latest Trends, Tips, and Inspirations</p>
+                <p>Our blog is dedicated to empowering women through the art of fashion. Discover style tips, curated collections, and expert advice to elevate your personal style.</p>
+            </div>
+            
+            <div class="profile-pic">
+                <img alt="Dianna Adams enjoying a fashion show" height="400" src="blogbanner1.png" width="400" />
+            </div>
+        </header>
+
+        <div class="search-categories">
+            <div class="search-bar">
+                <input type="text" class="search-input" id="searchInput"
+                    placeholder="Search for fashion tips, trends..." oninput="filterSuggestions()">
+                <button class="search-button" onclick="searchBlog()">Search</button>
+            </div>
+            <div id="searchResults"></div>
+
+            <!-- Suggestions Dropdown -->
+            <div id="suggestionsDropdown" class="suggestions-dropdown"></div>
+        </div>
+
+        <!-- Blog Posts Section -->
+        <section class="latest-reviews">
+            <div class="section-title">
+                <center>
+                    <h2
+                        style="font-family: 'Playfair Display', serif; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px;">
+                        Blog Posts
+                    </h2>
+                    <br>
+                    <br>
+                    <br>
+                </center>
+            </div>
+
+            <div class="reviews" id="reviewsContainer">
+                <!-- Blog Post Cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Resource Guides Section -->
+        <section class="resource-guides">
+            <div class="section-title">
+                <center>
+                    <br>
+                    <br>
+                    <h2
+                        style="font-family: 'Playfair Display', serif; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px;">
+                        Resource Guides
+                    </h2>
+                    <br>
+                    <br>
+                    <br>
+                </center>
+            </div>
+            <div class="resource-items" id="resourceContainer">
+                <!-- Resource Cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products">
+            <div class="section-title">
+                <center>
+                    <h2
+                        style="font-family: 'Playfair Display', serif; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px;">
+                        Featured Products
+                    </h2>
+                    <br>
+                    <br>
+                </center>
+            </div>
+
+            <div class="product-cards">
+                <div class="product-card">
+                    <img src="w18.jpg" alt="Featured Product 1">
+                    <div class="content">
+                        <h3>Oversized Tee</h3>
+                        <p>Chic and versatile for any occasion.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="w27.jpg" alt="Featured Product 2">
+                    <div class="content">
+                        <h3>Longline Cardigan</h3>
+                        <p>Stay stylish and warm this season.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="w36.jpg" alt="Featured Product 3">
+                    <div class="content">
+                        <h3>Satin Slip Dress</h3>
+                        <p>Add elegance to any outfit.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="w45.jpg" alt="Featured Product 4">
+                    <div class="content">
+                        <h3>Glitter Saree</h3>
+                        <p>The perfect dress for a night out.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="w54.jpg" alt="Featured Product 5">
+                    <div class="content">
+                        <h3>Designer Lehenga</h3>
+                        <p>The perfect dress for a night out.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="w63.jpg" alt="Featured Product 6">
+                    <div class="content">
+                        <h3>Cable Knit Sweater</h3>
+                        <p>The perfect dress for a night out.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Subscribe Section -->
+        <div class="subscribe-section">
+            <h3 style="font-family: 'Playfair Display', serif;">Stay Updated with Our Latest Trends & Tips!</h3>
+            <input type="email" id="subscribeEmail" placeholder="Enter your email" required>
+            <button onclick="subscribe()">Subscribe</button>
+            <div id="validationMessage" class="validation-message"></div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-4 text-start">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Links</h4>
+                        <a href="about.html" class="btn-link"> About</a>
+                        <a href="shop.html" class="btn-link"> Shop</a>
+                        <a href="blog.html" class="btn-link"> Blog</a>
+                        <a href="faq.html" class="btn-link"> FAQ</a>
+                        <a href="contact.html" class="btn-link"> Contact</a>
+                        <a href="wishlist.html" class="btn-link"> Wishlist</a>
+                        <a href="dashboard.html" class="btn-link"> Dashboard</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-item">
+                        <h4 class="mb-4 text-white">Hello Gorgeous</h4>
+                        <p class="text-white">Discover elegance and style with our exclusive boutique collection. Each
+                            piece is crafted to perfection, merging classic design with modern trends. Our boutique
+                            celebrates the art of fashion, bringing unique, high-quality pieces to elevate your
+                            wardrobe. </p>
+
+                        <div class="btn-link d-flex justify-content-center">
+                            <a href="https://www.facebook.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.x.com" class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com"
+                                class="btn btn-md-square btn-light btn-light-outline-0 me-0"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Follow Us</h4>
+                        <a href="https://www.facebook.com" class="btn-link">  Facebook         </a>
+                        <a href="https://www.instagram.com" class="btn-link"> Instagram</a>
+                        <a href="https://www.x.com" class="btn-link"> Twitter</a>
+                        <h4 class="my-4 text-white">Contact Us</h4>
+                        <a class="btn-link"><i class="fas fa-envelope text-secondary me-2"></i>
+                            hellogorgeous@gmail.com</a>
+                        <a class="btn-link"><i class="fas fa-phone-alt  text-secondary me-2"></i>+91 1986654321</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-light"><a><i class="fas fa-copyright text-light me-2"></i>Hello Gorgeous</a>, All
+                        right reserved.</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        const articles = [
+            { title: 'Latest Designer Wear Trends', description: 'Stay up-to-date with the latest trends in designer fashion. Discover how top designers are shaping the future of fashion, from avant-garde styles to classic reimagined looks. Learn what’s in vogue for the upcoming seasons and how to incorporate the latest trends into your wardrobe for a timeless yet modern look.', category: 'blog', image: 'blog1.jpg' },
+            { title: 'Essential Fashion Tips for Designer', description: 'Learn how to style designer pieces with ease and confidence. From pairing high-end garments with everyday essentials to knowing when to invest in staple designer items, this guide offers expert styling advice to elevate your fashion game. Unlock the secrets to wearing luxury pieces in a way that feels both effortless and chic.', category: 'blog', image: 'blog2.jpg' },
+            { title: 'Understanding Fabrics in Designer Wear', description: 'Discover the fabrics that make up high-end designer wear. Learn about the different types of materials used in luxury fashion, such as silk, cashmere, leather, and wool. Understand the qualities that set designer fabrics apart, including texture, durability, and comfort.', category: 'blog', image: 'blog3.jpg' },
+            { title: 'Designer Wear Material Guide', description: 'An in-depth look at the materials used in designer wear. This guide explores the intricacies of fabric selection for top designers, highlighting key materials and their benefits. From breathable cotton to luxurious velvet, learn which materials are best suited for various fashion pieces and how they impact the aesthetics.', category: 'blog', image: 'blog4.jpg' },
+            { title: 'Top Designer Brands to Know', description: 'Explore the world’s top designer brands and their iconic pieces. This article delves into the history and legacy of famous luxury fashion houses such as Chanel, Gucci, Louis Vuitton, and more. Discover the hallmark designs that define each brand and why they continue to set the trends that dominate the fashion world.', category: 'blog', image: 'blog5.jpg' },
+            { title: 'Caring for Designer Clothes', description: 'Learn how to maintain your designer clothes in perfect condition. Whether it’s preserving the fabric, avoiding common mistakes when washing or storing, or properly handling delicate items, this article offers tips and tricks for extending the life of your most treasured designer garments.', category: 'blog', image: 'blog6.jpg' },
+            { title: 'Fabric Selection for Boutique Collections', description: 'Learn how to choose the best fabrics for your boutique’s exclusive collections. This guide provides insight into fabric selection for boutique designers, helping you understand which materials work best for specific styles, seasons, and customer preferences.', category: 'resource', image: 'blog7.jpg' },
+            { title: 'Top Boutique Fashion Designers', description: 'Discover the top designers shaping the boutique fashion world. This article highlights emerging boutique designers who are making waves in the fashion industry. Learn about their unique design philosophies, their inspirations, and the signature styles that have helped them carve a niche in the competitive world of boutique fashion.', category: 'resource', image: 'blog8.jpg' },
+            { title: 'Boutique Clothing Care and Maintenance', description: 'Tips on maintaining boutique clothing in pristine condition. Maintaining high-quality boutique garments requires attention to detail, proper storage, and knowledge of the materials involved. This article provides essential tips on caring for boutique clothing.', category: 'resource', image: 'blog9.jpg' },
+            { title: 'Creating Custom Boutique Pieces', description: 'How to design and create custom pieces for your boutique’s unique collections. Whether you re designing from scratch or customizing existing pieces, this guide walks you through the entire process of creating exclusive, tailor made clothing for your boutique.Learn about fabric sourcing, pattern making, and the art of craftsmanship.', category: 'resource', image: 'blog10.jpg' },
+            { title: 'Boutique Branding and Marketing', description: 'Learn how to effectively brand and market your boutique to attract the right customers. This article dives into the strategies behind successful boutique branding, from creating a distinctive logo and visual identity to implementing marketing tactics that build loyalty and drive foot traffic.', category: 'resource', image: 'blog11.jpg' },
+            { title: 'Sustainable Practices for Women’s Boutiques', description: 'Explore sustainable fashion practices that can be incorporated into your boutique’s offerings. With the growing demand for eco-friendly fashion, this guide explores how boutique owners can integrate sustainable practices, from sourcing ethically produced fabrics to implementing.', category: 'resource', image: 'blog12.jpg' }
+        ];
+
+
+        // Show suggestions based on the input
+        function filterSuggestions() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const suggestionsDropdown = document.getElementById('suggestionsDropdown');
+
+            // Clear previous suggestions
+            suggestionsDropdown.innerHTML = '';
+
+            // Hide suggestions if input is empty
+            if (searchTerm === '') {
+                suggestionsDropdown.style.display = 'none';
+                return; // Exit function if no input
+            }
+
+            // Filter articles based on the search term
+            const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(searchTerm));
+
+            if (filteredArticles.length > 0) {
+                suggestionsDropdown.style.display = 'block'; // Show suggestions
+                filteredArticles.forEach(article => {
+                    const suggestion = document.createElement('p');
+                    suggestion.textContent = article.title;
+                    suggestion.onclick = () => {
+                        // Set the value of the input and show filtered results
+                        document.getElementById('searchInput').value = article.title;
+                        showFilteredResults(article.title); // Show filtered results based on the clicked suggestion
+
+                        // Hide the suggestions dropdown
+                        suggestionsDropdown.style.display = 'none';
+                    };
+                    suggestionsDropdown.appendChild(suggestion);
+                });
+            } else {
+                suggestionsDropdown.style.display = 'none'; // Hide if no matches
+            }
+        }
+
+        // Filter and display the results when a suggestion is clicked
+        function showFilteredResults(query) {
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            const resourceContainer = document.getElementById('resourceContainer');
+            reviewsContainer.innerHTML = '';
+            resourceContainer.innerHTML = '';
+
+            // Filter articles based on the clicked query
+            const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(query.toLowerCase()));
+
+            filteredArticles.forEach(article => {
+                const card = document.createElement('div');
+                card.classList.add(article.category === 'blog' ? 'review' : 'resource-item');
+
+                // Add image, title, and description to each card
+                card.innerHTML = `
+            <img alt="${article.title}" src="${article.image}" width="400" height="300" />
+            <div class="content">
+                <h3>${article.title}</h3>
+                <p>${article.description}</p>
+            </div>
+        `;
+
+                if (article.category === 'blog') {
+                    reviewsContainer.appendChild(card);
+                } else {
+                    resourceContainer.appendChild(card);
+                }
+            });
+        }
+
+        // Show all articles initially
+        window.onload = function () {
+            showFilteredResults('');
+        }
+
+
+        // subscribe button script
+
+        // Add input event listener for real-time validation
+        document.getElementById('subscribeEmail').addEventListener('input', function () {
+            const emailField = document.getElementById('subscribeEmail');
+            const validationMessage = document.getElementById('validationMessage');
+            const emailValue = emailField.value.trim();
+
+            // Clear previous messages
+            validationMessage.textContent = '';
+            validationMessage.classList.remove('error', 'success');
+
+            // Validate email format
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (emailValue === '') {
+                // Do nothing if the field is empty
+            } else if (!emailPattern.test(emailValue)) {
+                validationMessage.textContent = 'Please enter a valid email address.';
+                validationMessage.classList.add('error');
+            } else {
+                validationMessage.textContent = 'Valid email address!';
+                validationMessage.classList.add('success');
+            }
+        });
+
+        // Subscribe function with validation
+        function subscribe() {
+            const emailField = document.getElementById('subscribeEmail');
+            const validationMessage = document.getElementById('validationMessage');
+            const emailValue = emailField.value.trim();
+
+            // Validate email on submit
+            if (emailValue === '') {
+                validationMessage.textContent = 'Please enter your email address.';
+                validationMessage.classList.add('error');
+            } else {
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailPattern.test(emailValue)) {
+                    validationMessage.textContent = 'Please enter a valid email address.';
+                    validationMessage.classList.add('error');
+                } else {
+                    validationMessage.textContent = 'Thank you for subscribing!';
+                    validationMessage.classList.add('success');
+                    // Optionally reset the email field after submission
+                    emailField.value = '';
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
