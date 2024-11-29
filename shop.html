@@ -1,0 +1,4146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello Gorgeous</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="listyle.css">
+</head>
+<style>
+    .footer {
+        position: relative;
+        z-index: 5;
+        /* Ensure it is below the sidebar */
+    }
+</style>
+
+<body>
+
+    <!-- Spinner Start -->
+    <!-- <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div> -->
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                    <a href="index.html" class="navbar-brand">
+                        <h4 class="text-primary display-6 fw-bold mb-0">Hello Gorgeous</h4>
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="shop.html" class="nav-item nav-link active">Shop</a>
+
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                            <a href="cart.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                            </a>
+
+                            <!-- Wishlist Icon with Link -->
+                            <a href="wishlist.html" class="btn btn-outline-primary ms-3">
+                                <i class="fas fa-heart"></i> Wishlist
+                            </a>
+                            <a href="dashboard.html"
+                                class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">DashBoard</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+<div style="display: flex;">    
+<div class="sidebarsection">
+    <div class="sidebar" style="margin-top: 23px;">
+        <h3>
+            CATEGORIES
+        </h3>
+        <ul>
+            <li>
+                <a href="#" onclick="filterProducts('casual')">
+                    Casual Wear
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="filterProducts('party')">
+                    Party Wear
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="filterProducts('winter')">
+                    Winter Wear
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="filterProducts('western')">
+                    Western Wear
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="filterProducts('ethnic')">
+                    Ethnic Wear
+                </a>
+            </li>
+        </ul>
+        <div class="show-all">
+            <a href="#" onclick="filterProducts('all')">
+                Show All
+            </a>
+        </div>
+    </div>
+</div>    
+
+<div class="contentsection" style="margin-left: -345px;">
+    <div class="content">
+        <div class="product-card casual">
+            <div>
+                <img alt="T-Shirt" src="w1.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.1</span>
+                        <span>(12)</span>
+                    </div>
+                    <h4>T-Shirt</h4>
+                    <p>Comfortable Cotton T-Shirt </p>
+                    <p class="price">
+                        Rs. 300
+                        <span class="original-price">
+                            Rs. 999
+                        </span>
+                        <span class="discount">
+                            (70% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w1.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Basic Tank Top" src="w2.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(16)</span>
+                    </div>
+                    <h4>Basic Tank Top</h4>
+                    <p>Comfortable Basic Tank Top</p>
+                    <p class="price">
+                        Rs. 400
+                        <span class="original-price">
+                            Rs. 899
+                        </span>
+                        <span class="discount">
+                            (55% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w2.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Printed T-Shirt" src="w3.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(16)</span>
+                    </div>
+                    <h4>Printed T-Shirt</h4>
+                    <p>Stylish Printed T-Shirt</p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 999
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w3.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Cropped Hoodie" src="w4.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(20)</span>
+                    </div>
+                    <h4>Cropped Hoodie</h4>
+                    <p>Cozy Cropped Hoodie</p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (47% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w4.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Denim Jeans" src="w5.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(25)</span>
+                    </div>
+                    <h4>Denim Jeans</h4>
+                    <p>Classic Denim Jeans</p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w5.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Maxi Dress" src="w6.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Casual Maxi Dress</h4>
+                    <p>Elegant Casual Maxi Dress</p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (52% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w6.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Jumpsuit" src="w7.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Casual Jumpsuit</h4>
+                    <p>Stylish Casual Jumpsuit</p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w7.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Cotton Skirt" src="w8.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(28)</span>
+                    </div>
+                    <h4>Cotton Skirt</h4>
+                    <p>Comfortable Cotton Skirt</p>
+                    <p class="price">
+                        Rs. 700
+                        <span class="original-price">
+                            Rs. 1400
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w8.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Cotton Pants" src="w9.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Cotton Pants</h4>
+                    <p>Comfortable Cotton Pants</p>
+                    <p class="price">
+                        Rs. 900
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w9.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Tunic" src="w10.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(22)</span>
+                    </div>
+                    <h4>Casual Tunic</h4>
+                    <p>Stylish Casual Tunic</p>
+                    <p class="price">
+                        Rs. 600
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w10.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Graphic Tee" src="w11.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(22)</span>
+                    </div>
+                    <h4>Graphic Tee</h4>
+                    <p>Trendy Graphic Tee</p>
+                    <p class="price">
+                        Rs. 400
+                        <span class="original-price">
+                            Rs. 800
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w11.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Boyfriend Jeans" src="w12.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Boyfriend Jeans</h4>
+                    <p>Comfortable Boyfriend Jeans </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (52% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w12.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Polo Shirt" src="w13.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.2</span>
+                        <span>(18)</span>
+                    </div>
+                    <h4>Polo Shirt</h4>
+                    <p>Stylish Polo Shirt </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (58% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w13.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Basic Sweater" src="w14.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(22)</span>
+                    </div>
+                    <h4>Basic Sweater</h4>
+                    <p>Cozy Basic Sweater </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (44% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w14.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Button-Down Shirt" src="w15.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Button-Down Shirt</h4>
+                    <p>Classic Button-Down Shirt </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (47% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w15.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Sweatpants" src="w16.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(32)</span>
+                    </div>
+                    <h4>Sweatpants</h4>
+                    <p>Comfortable Sweatpants </p>
+                    <p class="price">
+                        Rs. 700
+                        <span class="original-price">
+                            Rs. 1400
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w16.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Leggings" src="w17.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(32)</span>
+                    </div>
+                    <h4>Leggings</h4>
+                    <p>Comfortable Leggings </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 1000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w17.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Oversized Tee" src="w18.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Oversized Tee</h4>
+                    <p>Trendy Oversized Tee </p>
+                    <p class="price">
+                        Rs. 600
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w18.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Blouse" src="w19.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.3</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Casual Blouse</h4>
+                    <p>Elegant Casual Blouse </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w19.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Relaxed-Fit Shorts" src="w20.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.2</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Relaxed-Fit Shorts</h4>
+                    <p>Comfortable Relaxed-Fit Shorts </p>
+                    <p class="price">
+                        Rs. 600
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w20.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Sleeveless Top" src="w21.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.3</span>
+                        <span>(28)</span>
+                    </div>
+                    <h4>Sleeveless Top</h4>
+                    <p>Stylish Sleeveless Top </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 1000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w21.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="High-Waisted Jeans" src="w22.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>High-Waisted Jeans</h4>
+                    <p>Comfortable High-Waisted Jeans </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w22.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Midi Dress" src="w23.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Casual Midi Dress</h4>
+                    <p>Stylish Casual Midi Dress</p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 2200
+                        </span>
+                        <span class="discount">
+                            (45% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w23.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Cropped T-Shirt" src="w24.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.2</span>
+                        <span>(25)</span>
+                    </div>
+                    <h4>Cropped T-Shirt</h4>
+                    <p>Trendy Cropped T-Shirt </p>
+                    <p class="price">
+                        Rs. 450
+                        <span class="original-price">
+                            Rs. 800
+                        </span>
+                        <span class="discount">
+                            (44% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w24.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Capris" src="w25.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Casual Capris</h4>
+                    <p>Comfortable Casual Capris </p>
+                    <p class="price">
+                        Rs. 600
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w25.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Knit Top" src="w26.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Knit Top</h4>
+                    <p>Cozy Knit Top </p>
+                    <p class="price">
+                        Rs. 700
+                        <span class="original-price">
+                            Rs. 1400
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w26.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Longline Cardigan" src="w27.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Longline Cardigan</h4>
+                    <p>Stylish Longline Cardigan </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w27.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Casual Overalls" src="w28.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Casual Overalls</h4>
+                    <p>Trendy Casual Overalls </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (44% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w28.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Basic Hoodie" src="w29.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(28)</span>
+                    </div>
+                    <h4>Basic Hoodie</h4>
+                    <p>Comfortable Basic Hoodie </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1600
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w29.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card casual">
+            <div>
+                <img alt="Everyday Joggers" src="w30.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Everyday Joggers</h4>
+                    <p>Comfortable Everyday Joggers </p>
+                    <p class="price">
+                        Rs. 700
+                        <span class="original-price">
+                            Rs. 1400
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w30.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="product-card party">
+            <div>
+                <img alt="Sequin Dress" src="w31.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.3</span>
+                        <span>(25)</span>
+                    </div>
+                    <h4>Sequin Dress</h4>
+                    <p>Glamorous Sequin Dress </p>
+                    <p class="price">
+                        Rs. 3000
+                        <span class="original-price">
+                            Rs. 6000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w31.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Off-Shoulder Gown" src="w32.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Off-Shoulder Gown</h4>
+                    <p>Elegant Off-Shoulder Gown </p>
+                    <p class="price">
+                        Rs. 5000
+                        <span class="original-price">
+                            Rs. 8000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w32.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Bodycon Mini Dress" src="w33.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(28)</span>
+                    </div>
+                    <h4>Bodycon Mini Dress</h4>
+                    <p>Stylish Bodycon Mini Dress </p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w33.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Velvet Dress" src="w34.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Velvet Dress</h4>
+                    <p>Elegant Velvet Dress </p>
+                    <p class="price">
+                        Rs. 2200
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (37.1% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w34.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Chiffon Dress" src="w35.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.3</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Chiffon Dress</h4>
+                    <p>Light and Breezy Chiffon Dress </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w35.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Satin Slip Dress" src="w36.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Satin Slip Dress</h4>
+                    <p>Sleek Satin Slip Dress </p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (42.9% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w36.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Embellished Jumpsuit" src="w37.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Embellished Jumpsuit</h4>
+                    <p>Chic Embellished Jumpsuit </p>
+                    <p class="price">
+                        Rs. 4000
+                        <span class="original-price">
+                            Rs. 6500
+                        </span>
+                        <span class="discount">
+                            (38.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w37.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Designer Saree" src="w38.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Designer Saree</h4>
+                    <p>Elegant Designer Saree </p>
+                    <p class="price">
+                        Rs. 7000
+                        <span class="original-price">
+                            Rs. 12000
+                        </span>
+                        <span class="discount">
+                            (41.7% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w38.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Halter-Neck Dress" src="w39.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Halter-Neck Dress</h4>
+                    <p>Chic Halter-Neck Dress</p>
+                    <p class="price">
+                        Rs. 2800
+                        <span class="original-price">
+                            Rs. 4500
+                        </span>
+                        <span class="discount">
+                            (37.8% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w39.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Lace Cocktail Dress" src="w40.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(42)</span>
+                    </div>
+                    <h4>Lace Cocktail Dress</h4>
+                    <p>Elegant Lace Cocktail Dress </p>
+                    <p class="price">
+                        Rs. 3200
+                        <span class="original-price">
+                            Rs. 5200
+                        </span>
+                        <span class="discount">
+                            (38.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w40.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Metallic Mini Skirt" src="w41.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Metallic Mini Skirt</h4>
+                    <p>Trendy Metallic Mini Skirt </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w41.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Embroidered Kurta" src="w42.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(32)</span>
+                    </div>
+                    <h4>Embroidered Kurta</h4>
+                    <p>Beautifully Embroidered Kurta </p>
+                    <p class="price">
+                        Rs. 2200
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (37.1% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w42.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="High-Low Dress" src="w43.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(28)</span>
+                    </div>
+                    <h4>High-Low Dress</h4>
+                    <p>Chic High-Low Dress</p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w43.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Long Gown" src="w44.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Long Gown</h4>
+                    <p>Elegant Long Gown </p>
+                    <p class="price">
+                        Rs. 6000
+                        <span class="original-price">
+                            Rs. 9000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w44.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Glitter Saree" src="w45.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Glitter Saree</h4>
+                    <p>Shimmering Glitter Saree </p>
+                    <p class="price">
+                        Rs. 5500
+                        <span class="original-price">
+                            Rs. 8500
+                        </span>
+                        <span class="discount">
+                            (35.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w45.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Maxi Skirt" src="w46.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Maxi Skirt</h4>
+                    <p>Comfortable and Stylish Maxi Skirt </p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3200
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w46.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Shimmer Top" src="w47.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Shimmer Top</h4>
+                    <p>Trendy Shimmer Top </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w47.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Cold-Shoulder Dress" src="w48.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Cold-Shoulder Dress</h4>
+                    <p>Stylish Cold-Shoulder Dress </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w48.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Drape Dress" src="w49.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Drape Dress</h4>
+                    <p>Elegant Drape Dress </p>
+                    <p class="price">
+                        Rs. 3500
+                        <span class="original-price">
+                            Rs. 5000
+                        </span>
+                        <span class="discount">
+                            (30% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w49.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Strapless Dress" src="w50.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Strapless Dress</h4>
+                    <p>Chic Strapless Dress </p>
+                    <p class="price">
+                        Rs. 2800
+                        <span class="original-price">
+                            Rs. 4500
+                        </span>
+                        <span class="discount">
+                            (37.8% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w50.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Embellished Kaftan" src="w51.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(42)</span>
+                    </div>
+                    <h4>Embellished Kaftan</h4>
+                    <p>Stylish Embellished Kaftan </p>
+                    <p class="price">
+                        Rs. 4000
+                        <span class="original-price">
+                            Rs. 6000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w51.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Cape Dress" src="w52.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Cape Dress</h4>
+                    <p>Elegant Cape Dress </p>
+                    <p class="price">
+                        Rs. 3200
+                        <span class="original-price">
+                            Rs. 4800
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w52.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="One-Shoulder Gown" src="w53.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(42)</span>
+                    </div>
+                    <h4>One-Shoulder Gown</h4>
+                    <p>Elegant One-Shoulder Gown </p>
+                    <p class="price">
+                        Rs. 5000
+                        <span class="original-price">
+                            Rs. 7500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w53.html">View More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Designer Lehenga" src="w54.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Designer Lehenga</h4>
+                    <p>Exclusive Designer Lehenga </p>
+                    <p class="price">
+                        Rs. 10000
+                        <span class="original-price">
+                            Rs. 15000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w54.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Frilled Dress" src="w55.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Frilled Dress</h4>
+                    <p>Charming Frilled Dress </p>
+                    <p class="price">
+                        Rs. 2200
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (37.1% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w55.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Wrap Dress" src="w56.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Wrap Dress</h4>
+                    <p>Elegant Wrap Dress </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w56.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Layered Dress" src="w57.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Layered Dress</h4>
+                    <p>Stylish Layered Dress</p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w57.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Tulip Skirt" src="w58.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Tulip Skirt</h4>
+                    <p>Charming Tulip Skirt </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2800
+                        </span>
+                        <span class="discount">
+                            (35.7% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w58.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Off-Shoulder Top" src="w59.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Off-Shoulder Top</h4>
+                    <p>Trendy Off-Shoulder Top </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w59.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card party">
+            <div>
+                <img alt="Asymmetric Dress" src="w60.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Asymmetric Dress</h4>
+                    <p>Stylish Asymmetric Dress </p>
+                    <p class="price">
+                        Rs. 3000
+                        <span class="original-price">
+                            Rs. 4500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w60.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="product-card winter">
+            <div>
+                <img alt="Wool Sweater" src="w61.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Wool Sweater</h4>
+                    <p>Cozy Wool Sweater </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w61.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Turtleneck Sweater" src="w62.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Turtleneck Sweater</h4>
+                    <p>Stylish Turtleneck Sweater</p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w62.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Cable Knit Sweater" src="w63.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Cable Knit Sweater</h4>
+                    <p>Cozy Cable Knit Sweater </p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (42.9% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w63.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Puffer Jacket" src="w64.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Puffer Jacket</h4>
+                    <p>Warm Puffer Jacket </p>
+                    <p class="price">
+                        Rs. 3500
+                        <span class="original-price">
+                            Rs. 6000
+                        </span>
+                        <span class="discount">
+                            (41.7% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w64.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Leather Jacket" src="w65.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Leather Jacket</h4>
+                    <p>Stylish Leather Jacket </p>
+                    <p class="price">
+                        Rs. 5000
+                        <span class="original-price">
+                            Rs. 8000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w65.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Trench Coat" src="w66.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Trench Coat</h4>
+                    <p>Elegant Trench Coat </p>
+                    <p class="price">
+                        Rs. 6000
+                        <span class="original-price">
+                            Rs. 9000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w66.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Fleece Hoodie" src="w67.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Fleece Hoodie</h4>
+                    <p>Cozy Fleece Hoodie </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (52% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w67.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Parka Jacket" src="w68.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Parka Jacket</h4>
+                    <p>Warm Parka Jacket</p>
+                    <p class="price">
+                        Rs. 3800
+                        <span class="original-price">
+                            Rs. 6000
+                        </span>
+                        <span class="discount">
+                            (36.7% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w68.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Cashmere Scarf" src="w69.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Cashmere Scarf</h4>
+                    <p>Luxurious Cashmere Scarf </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w69.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Quilted Vest" src="w70.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Quilted Vest</h4>
+                    <p>Warm Quilted Vest</p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (42.9% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w70.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Long Wool Coat" src="w71.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Long Wool Coat</h4>
+                    <p>Elegant Long Wool Coat </p>
+                    <p class="price">
+                        Rs. 7000
+                        <span class="original-price">
+                            Rs. 10000
+                        </span>
+                        <span class="discount">
+                            (30% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w71.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Peacoat" src="w72.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Peacoat</h4>
+                    <p>Stylish Peacoat</p>
+                    <p class="price">
+                        Rs. 4500
+                        <span class="original-price">
+                            Rs. 7000
+                        </span>
+                        <span class="discount">
+                            (35.7% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w72.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Sherpa Jacket" src="w73.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Sherpa Jacket</h4>
+                    <p>Cozy Sherpa Jacket</p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w73.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Oversized Cardigan" src="w74.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Oversized Cardigan</h4>
+                    <p>Cozy Oversized Cardigan </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w74.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Faux Fur Coat" src="w75.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Faux Fur Coat</h4>
+                    <p>Luxurious Faux Fur Coat </p>
+                    <p class="price">
+                        Rs. 5000
+                        <span class="original-price">
+                            Rs. 8000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w75.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Bomber Jacket" src="w76.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Bomber Jacket</h4>
+                    <p>Classic Bomber Jacket </p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w76.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Down Jacket" src="w77.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Down Jacket</h4>
+                    <p>Warm Down Jacket </p>
+                    <p class="price">
+                        Rs. 6000
+                        <span class="original-price">
+                            Rs. 9000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w77.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Denim Jacket" src="w78.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(48)</span>
+                    </div>
+                    <h4>Denim Jacket</h4>
+                    <p>Trendy Denim Jacket </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w78.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Cropped Sweater" src="w79.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(42)</span>
+                    </div>
+                    <h4>Cropped Sweater</h4>
+                    <p>Stylish Cropped Sweater </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w79.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Fleece Joggers" src="w80.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Fleece Joggers</h4>
+                    <p>Comfortable Fleece Joggers</p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (44.4% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w80.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Hoodie Dress" src="w81.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Hoodie Dress</h4>
+                    <p>Stylish Hoodie Dress </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w81.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Turtleneck Top" src="w82.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(36)</span>
+                    </div>
+                    <h4>Turtleneck Top</h4>
+                    <p>Classic Turtleneck Top</p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1700
+                        </span>
+                        <span class="discount">
+                            (41.2% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w82.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Woolen Skirt" src="w83.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(42)</span>
+                    </div>
+                    <h4>Woolen Skirt</h4>
+                    <p>Elegant Woolen Skirt </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w83.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Knit Beanie" src="w84.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Knit Beanie</h4>
+                    <p>Warm Knit Beanie </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 800
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w84.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Warm Leggings" src="w85.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Warm Leggings</h4>
+                    <p>Comfortable Warm Leggings </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w85.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Poncho" src="w86.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Poncho</h4>
+                    <p>Stylish Poncho </p>
+                    <p class="price">
+                        Rs. 2200
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (37.1% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w86.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Blanket Scarf" src="w87.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Blanket Scarf</h4>
+                    <p>Cozy Blanket Scarf </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w87.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Hooded Sweater" src="w88.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Hooded Sweater</h4>
+                    <p>Comfy Hooded Sweater </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (28% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w88.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Cozy Socks" src="w89.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Cozy Socks</h4>
+                    <p>Soft and Warm Cozy Socks </p>
+                    <p class="price">
+                        Rs. 300
+                        <span class="original-price">
+                            Rs. 500
+                        </span>
+                        <span class="discount">
+                            (40% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w89.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card winter">
+            <div>
+                <img alt="Thermal Top" src="w90.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Thermal Top</h4>
+                    <p>Comfortable Thermal Top </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w90.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="product-card western">
+            <div>
+                <img alt="Crop Top" src="w91.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Crop Top</h4>
+                    <p>Stylish Crop Top </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 1000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w91.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Pencil Skirt" src="w92.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Pencil Skirt</h4>
+                    <p>Elegant Pencil Skirt              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w92.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Ripped Jeans" src="w93.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Ripped Jeans</h4>
+                    <p>Trendy Ripped Jeans              </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (28% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w93.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Formal Blazer" src="w94.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Formal Blazer</h4>
+                    <p>Elegant Formal Blazer              </p>
+                    <p class="price">
+                        Rs. 3000
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w94.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Bodycon Dress" src="w95.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Bodycon Dress</h4>
+                    <p>Chic Bodycon Dress              </p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w95.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Jumpsuit" src="w96.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Jumpsuit</h4>
+                    <p>Stylish Jumpsuit              </p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (28.6% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w96.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Western Shorts" src="w97.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Western Shorts</h4>
+                    <p>Trendy Western Shorts              </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w97.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Tank Dress" src="w98.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Tank Dress</h4>
+                    <p>Stylish Tank Dress              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w98.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Blouse" src="w99.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Blouse</h4>
+                    <p>Elegant Blouse              </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w99.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Bootcut Jeans" src="w100.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Bootcut Jeans</h4>
+                    <p>Stylish Bootcut Jeans              </p>
+                    <p class="price">
+                        Rs. 1600
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (20% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w100.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Palazzo Pants" src="w101.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Palazzo Pants</h4>
+                    <p>Comfortable Palazzo Pants              </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w101.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="A-Line Skirt" src="w102.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>A-Line Skirt</h4>
+                    <p>Stylish A-Line Skirt              </p>
+                    <p class="price">
+                        Rs. 900
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w102.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Romper" src="w103.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Romper</h4>
+                    <p>Trendy Romper              </p>
+                    <p class="price">
+                        Rs. 1300
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (27.8% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w103.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Tube Top" src="w104.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Tube Top</h4>
+                    <p>Stylish Tube Top              </p>
+                    <p class="price">
+                        Rs. 400
+                        <span class="original-price">
+                            Rs. 600
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w104.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Slim Fit Pants" src="w105.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Slim Fit Pants</h4>
+                    <p>Trendy Slim Fit Pants              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1600
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w105.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Bardot Dress" src="w106.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Bardot Dress</h4>
+                    <p>Chic Bardot Dress              </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2400
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w106.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Tuxedo Dress" src="w107.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(70)</span>
+                    </div>
+                    <h4>Tuxedo Dress</h4>
+                    <p>Elegant Tuxedo Dress              </p>
+                    <p class="price">
+                        Rs. 3000
+                        <span class="original-price">
+                            Rs. 4000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w107.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Midi Skirt" src="w108.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Midi Skirt</h4>
+                    <p>Trendy Midi Skirt              </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w108.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Ruffle Blouse" src="w109.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Ruffle Blouse</h4>
+                    <p>Elegant Ruffle Blouse              </p>
+                    <p class="price">
+                        Rs. 900
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w109.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="High-Waisted Shorts" src="w110.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>High-Waisted Shorts</h4>
+                    <p>Trendy High-Waisted Shorts              </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w110.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Plaid Shirt" src="w111.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.3</span>
+                        <span>(38)</span>
+                    </div>
+                    <h4>Plaid Shirt</h4>
+                    <p>Casual Plaid Shirt              </p>
+                    <p class="price">
+                        Rs. 700
+                        <span class="original-price">
+                            Rs. 1000
+                        </span>
+                        <span class="discount">
+                            (30% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w111.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Denim Shorts" src="w112.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.2</span>
+                        <span>(25)</span>
+                    </div>
+                    <h4>Denim Shorts</h4>
+                    <p>Comfortable Denim Shorts              </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 800
+                        </span>
+                        <span class="discount">
+                            (37.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w112.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Midi Dress" src="w113.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Midi Dress</h4>
+                    <p>Elegant Midi Dress              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w113.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Wrap Skirt" src="w114.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(35)</span>
+                    </div>
+                    <h4>Wrap Skirt</h4>
+                    <p>Chic Wrap Skirt              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1600
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w114.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Wide-Leg Pants" src="w115.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Wide-Leg Pants</h4>
+                    <p>Comfortable Wide-Leg Pants              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w115.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Ruffle Dress" src="w116.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Ruffle Dress</h4>
+                    <p>Elegant Ruffle Dress              </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2400
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w116.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Striped Blouse" src="w117.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Striped Blouse</h4>
+                    <p>Trendy Striped Blouse              </p>
+                    <p class="price">
+                        Rs. 700
+                        <span class="original-price">
+                            Rs. 1000
+                        </span>
+                        <span class="discount">
+                            (30% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w117.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Pleated Skirt" src="w118.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Pleated Skirt</h4>
+                    <p>Elegant Pleated Skirt              </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w118.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Cropped Pants" src="w119.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Cropped Pants</h4>
+                    <p>Stylish Cropped Pants              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1600
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w119.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card western">
+            <div>
+                <img alt="Shirt Dress" src="w120.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Shirt Dress</h4>
+                    <p>Elegant Shirt Dress              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w120.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Kurti" src="w121.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Kurti</h4>
+                    <p>Elegant Kurti              </p>
+                    <p class="price">
+                        Rs. 500
+                        <span class="original-price">
+                            Rs. 1000
+                        </span>
+                        <span class="discount">
+                            (50% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w121.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Anarkali Suit" src="w122.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(30)</span>
+                    </div>
+                    <h4>Anarkali Suit</h4>
+                    <p>Elegant Anarkali Suit              </p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (28.6% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w122.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Lehenga" src="w123.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Lehenga</h4>
+                    <p>Exquisite Lehenga              </p>
+                    <p class="price">
+                        Rs. 7000
+                        <span class="original-price">
+                            Rs. 10000
+                        </span>
+                        <span class="discount">
+                            (30% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w123.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Banarasi Saree" src="w124.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Banarasi Saree</h4>
+                    <p>Elegant Banarasi Saree              </p>
+                    <p class="price">
+                        Rs. 5000
+                        <span class="original-price">
+                            Rs. 7000
+                        </span>
+                        <span class="discount">
+                            (28.6% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w124.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Silk Dupatta" src="w125.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Silk Dupatta</h4>
+                    <p>Elegant Silk Dupatta              </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w125.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Chikankari Kurta" src="w126.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Chikankari Kurta</h4>
+                    <p>Elegant Chikankari Kurta              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w126.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Patiala Suit" src="w127.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Patiala Suit</h4>
+                    <p>Stylish Patiala Suit              </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (28% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w127.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Phulkari Dupatta" src="w128.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Phulkari Dupatta</h4>
+                    <p>Exquisite Phulkari Dupatta              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (20% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w128.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Brocade Lehenga" src="w129.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Brocade Lehenga</h4>
+                    <p>Exquisite Brocade Lehenga              </p>
+                    <p class="price">
+                        Rs. 8000
+                        <span class="original-price">
+                            Rs. 10000
+                        </span>
+                        <span class="discount">
+                            (20% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w129.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Ethnic Jacket" src="w130.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Ethnic Jacket</h4>
+                    <p>Stylish Ethnic Jacket              </p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 3500
+                        </span>
+                        <span class="discount">
+                            (28.6% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w130.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Angrakha Kurti" src="w131.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Angrakha Kurti</h4>
+                    <p>Traditional Angrakha Kurti              </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w131.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Sharara Suit" src="w132.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Sharara Suit</h4>
+                    <p>Elegant Sharara Suit              </p>
+                    <p class="price">
+                        Rs. 3500
+                        <span class="original-price">
+                            Rs. 4500
+                        </span>
+                        <span class="discount">
+                            (22.2% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w132.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Paithani Saree" src="w133.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Paithani Saree</h4>
+                    <p>Exquisite Paithani Saree              </p>
+                    <p class="price">
+                        Rs. 6000
+                        <span class="original-price">
+                            Rs. 8000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w133.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Bandhani Dress" src="w134.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Bandhani Dress</h4>
+                    <p>Traditional Bandhani Dress              </p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w134.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Churidar Set" src="w135.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Churidar Set</h4>
+                    <p>Elegant Churidar Set              </p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1800
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w135.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Kanjivaram Saree" src="w136.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Kanjivaram Saree</h4>
+                    <p>Exquisite Kanjivaram Saree              </p>
+                    <p class="price">
+                        Rs. 7500
+                        <span class="original-price">
+                            Rs. 10000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w136.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Palazzo Suit" src="w137.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Palazzo Suit</h4>
+                    <p>Elegant Palazzo Suit              </p>
+                    <p class="price">
+                        Rs. 2000
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w137.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Ikat Dress" src="w138.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(45)</span>
+                    </div>
+                    <h4>Ikat Dress</h4>
+                    <p>Beautiful Ikat Dress              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w138.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Block Print Kurta" src="w139.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Block Print Kurta</h4>
+                    <p>Stylish Block Print Kurta              </p>
+                    <p class="price">
+                        Rs. 800
+                        <span class="original-price">
+                            Rs. 1200
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w139.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Silk Saree" src="w140.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Silk Saree</h4>
+                    <p>Elegant Silk Saree              </p>
+                    <p class="price">
+                        Rs. 5000
+                        <span class="original-price">
+                            Rs. 7000
+                        </span>
+                        <span class="discount">
+                            (28.6% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w140.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Dhoti Pants" src="w141.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.5</span>
+                        <span>(40)</span>
+                    </div>
+                    <h4>Dhoti Pants</h4>
+                    <p>Stylish Dhoti Pants              </p>
+                    <p class="price">
+                        Rs. 1000
+                        <span class="original-price">
+                            Rs. 1500
+                        </span>
+                        <span class="discount">
+                            (33.3% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w141.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Zari Dupatta" src="w142.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Zari Dupatta</h4>
+                    <p>Elegant Zari Dupatta              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w142.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Jodhpuri Suit" src="w143.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Jodhpuri Suit</h4>
+                    <p>Elegant Jodhpuri Suit for Men</p>
+                    <p class="price">
+                        Rs. 3500
+                        <span class="original-price">
+                            Rs. 4500
+                        </span>
+                        <span class="discount">
+                            (22.2% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w143.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Kalamkari Kurta" src="w144.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Kalamkari Kurta</h4>
+                    <p>Traditional Kalamkari Kurta for Men</p>
+                    <p class="price">
+                        Rs. 1200
+                        <span class="original-price">
+                            Rs. 1600
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w144.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Gota Work Dress" src="w145.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Gota Work Dress</h4>
+                    <p>Beautiful Gota Work Dress              </p>
+                    <p class="price">
+                        Rs. 2500
+                        <span class="original-price">
+                            Rs. 3000
+                        </span>
+                        <span class="discount">
+                            (16.7% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w145.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Mirror Work Lehenga" src="w146.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                        <span>(65)</span>
+                    </div>
+                    <h4>Mirror Work Lehenga</h4>
+                    <p>Exquisite Mirror Work Lehenga              </p>
+                    <p class="price">
+                        Rs. 6500
+                        <span class="original-price">
+                            Rs. 8500
+                        </span>
+                        <span class="discount">
+                            (23.5% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w146.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Cape Kurti" src="w147.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(50)</span>
+                    </div>
+                    <h4>Cape Kurti</h4>
+                    <p>Stylish Cape Kurti              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w147.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Cotton Saree" src="w148.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                        <span>(60)</span>
+                    </div>
+                    <h4>Cotton Saree</h4>
+                    <p>Comfortable Cotton Saree              </p>
+                    <p class="price">
+                        Rs. 1800
+                        <span class="original-price">
+                            Rs. 2500
+                        </span>
+                        <span class="discount">
+                            (28% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w148.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Straight Cut Suit" src="w149.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                        <span>(55)</span>
+                    </div>
+                    <h4>Straight Cut Suit</h4>
+                    <p>Stylish Straight Cut Suit              </p>
+                    <p class="price">
+                        Rs. 1500
+                        <span class="original-price">
+                            Rs. 2000
+                        </span>
+                        <span class="discount">
+                            (25% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w149.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-card ethnic">
+            <div>
+                <img alt="Ghagra Choli" src="w150.jpg" />
+                <div class="details">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                        <span>(70)</span>
+                    </div>
+                    <h4>Ghagra Choli</h4>
+                    <p>Elegant Ghagra Choli              </p>
+                    <p class="price">
+                        Rs. 4000
+                        <span class="original-price">
+                            Rs. 5000
+                        </span>
+                        <span class="discount">
+                            (20% OFF)
+                        </span>
+                    </p>
+                    <div class="view-more">
+                        <a href="w150.html">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5 justify-content-center">
+                    <div class="col-lg-4 text-start">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Links</h4>
+                            <a href="about.html" class="btn-link"> About</a>
+                            <a href="shop.html" class="btn-link"> Shop</a>
+                            <a href="blog.html" class="btn-link"> Blog</a>
+                            <a href="faq.html" class="btn-link"> FAQ</a>
+                            <a href="contact.html" class="btn-link"> Contact</a>
+                            <a href="wishlist.html" class="btn-link"> Wishlist</a>
+                            <a href="dashboard.html" class="btn-link"> Dashboard</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="footer-item">
+                            <h4 class="mb-4 text-white">Hello Gorgeous</h4>
+                            <p class="text-white">Discover elegance and style with our exclusive boutique collection.
+                                Each piece is crafted to perfection, merging classic design with modern trends. Our
+                                boutique celebrates the art of fashion, bringing unique, high-quality pieces to elevate
+                                your wardrobe. </p>
+
+                            <div class="btn-link d-flex justify-content-center">
+                                <a href="https://www.facebook.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.x.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-2"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com"
+                                    class="btn btn-md-square btn-light btn-light-outline-0 me-0"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Follow Us</h4>
+                            <a href="https://www.facebook.com" class="btn-link">  Facebook         </a>
+                            <a href="https://www.instagram.com" class="btn-link"> Instagram</a>
+                            <a href="https://www.x.com" class="btn-link"> Twitter</a>
+                            <h4 class="my-4 text-white">Contact Us</h4>
+                            <a class="btn-link"><i class="fas fa-envelope text-secondary me-2"></i>
+                                hellogorgeous@gmail.com</a>
+                            <a class="btn-link"><i class="fas fa-phone-alt  text-secondary me-2"></i>+91 1986654321</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4" style="z-index: 1000;">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-light"><a><i class="fas fa-copyright text-light me-2"></i>Hello Gorgeous</a>,
+                            All right reserved.</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="listing.js"></script>
+
+</body>
+
+</html>
